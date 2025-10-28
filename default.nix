@@ -8,6 +8,9 @@ python3.pkgs.buildPythonApplication rec {
 
   src = pkgsSrc;
 
+  build-system = [ python3.pkgs.setuptools ];
+  pyproject = true;
+  
   buildInputs = [ makeWrapper ];
   nativeCheckInputs = [
     python3.pkgs.black
